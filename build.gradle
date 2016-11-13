@@ -1,0 +1,27 @@
+buildscript {
+    ext {
+        kotlinVersion = '1.0.5'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+
+allprojects {
+    apply plugin: "idea"
+    apply plugin: "java"
+    apply plugin: "kotlin"
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    }
+}
+
